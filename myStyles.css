@@ -1,0 +1,677 @@
+/*NOTE Do NOT mess with DIV Width or Height in here, inline style it, or make a class/id for it*/
+@media only screen and (max-width:1366px){
+
+  /* Slightly tighter layout */
+  .home, .mission, .services, .contact, .help{
+    padding:15px;
+  }
+
+  /* Image scales down a bit */
+  .frontPic{
+    width:35%;
+  }
+
+  /* Board layout becomes 2-column feel */
+  .left, .right{
+    flex:1 1 45%;
+  }
+
+  /* Memories grid → 3 columns */
+  .memoriesContainer{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Sponsor grid tighter */
+  .sponsor-images{
+    grid-template-columns: repeat(3, 1fr);
+    max-width:90%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Contact image slightly smaller */
+  .contactPImage{
+    width:300px;
+    height:auto;
+	margin-right:-5vw;
+  }
+
+  /* Slight text scaling */
+  p, li{
+    font-size:18px;
+  }
+
+  #contact{
+    font-size:42px;
+  }
+  .memoriesTributeImage{
+	width:90px;
+	margin-left:30vw;
+}
+}
+@media only screen and (max-width:1024px){
+	 /* Navbar: stack better */
+  .topNav a, .drop .dropbtn{
+    padding:12px;
+    font-size:15px;
+  }
+
+  /* Image scaling */
+  .frontPic{
+    width:50%;
+  }
+
+  /* Two-column layouts → single column */
+  .left, .right{
+    float:none;
+    max-width:100%;
+    display:block;
+  }
+
+  /* Board + memories grids shrink */
+  .memoriesContainer{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bodContainer{
+    grid-template-columns: 1fr;
+  }
+
+  /* Sponsor grid tighter */
+  .sponsor-images{
+    grid-template-columns: repeat(2, 1fr);
+    max-width:80%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Images scale down */
+  .helpI, .helpI2{
+    width:100%;
+    padding-left:0;
+  }
+
+  /* Contact image smaller */
+  .contactPImage{
+    width:250px;
+    height:auto;
+  }
+
+  /* Text scaling */
+  p, li{
+    font-size:17px;
+  }
+
+  #contact{
+    font-size:36px;
+  }
+}
+@media (max-width:768px){
+
+  .menu-toggle{
+    display:block;
+    position:absolute;
+    top:10px;
+    right:10px;
+    z-index:1000;
+  }
+
+  .topNav{
+    flex-direction:column;
+    align-items:flex-start;
+    position:relative;
+  }
+
+  /* Hide menu links ONLY */
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background-color:#0D1D41;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  /* Show links nicely when opened */
+  .topNav a, .drop{
+    width:100%;
+    text-align:left;
+    padding:12px;
+  }
+
+  .drop-content{
+    position:relative;
+  }
+}
+
+@media only screen and (max-width:430px){
+  .topNav a, .drop{
+    float:none;
+    width:100%;
+    text-align:left;
+  }
+  .menu-toggle{
+    display:block;
+  }
+  .drop-content{
+    position:relative;
+  }
+
+  /* Hero image */
+  .frontPic{
+    width:80%;
+  }
+
+  /* Full single column everywhere */
+  .left, .right{
+    float:none;
+    max-width:100%;
+    padding:10px;
+  }
+
+  /* Reduce padding globally */
+  .home, .mission, .board, .services, .contact, .help{
+    padding:10px;
+  }
+
+  /* Lists full width */
+  li{
+    max-width:100%;
+    padding:10px;
+  }
+
+  /* Grids collapse to 1 column */
+  .memoriesContainer{
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-images{
+    grid-template-columns: 1fr;
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Typography scaling */
+  p{
+    font-size:16px;
+  }
+
+  .missionP{
+    font-size:18px;
+  }
+
+  .services{
+    font-size:17px;
+  }
+
+  .contact{
+    font-size:18px;
+  }
+
+  #contact{
+    font-size:28px;
+  }
+
+  /* Buttons easier to tap */
+  .apply{
+    width:100%;
+    font-size:16px;
+    padding:12px;
+  }
+
+  /* Images responsive */
+  .helpI, .helpI2{
+    width:100%;
+    padding-left:0;
+  }
+
+  .contactP{
+    position:static;
+    margin-top:30px;
+  }
+
+  .contactPImage{
+    width:100%;
+    height:auto;
+  }
+
+  /* Fix memories images scaling */
+  .memoriesImage{
+    zoom:1;
+    max-width:100%;
+  }
+
+  .memoriesTributeImage{
+    width:70px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Sponsor title spacing fix */
+  .sponsor{
+    padding-right:0;
+    text-align:center;
+    font-size:24px;
+  }
+
+  span{
+    padding-left:10px;
+    padding-right:10px;
+  }
+}
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	background-color:#0D1D41;
+	color:white;
+	overflow-x:hidden;
+	max-width:100%;
+}
+
+/* NavBar stuff that hurts my brain */
+a:link, a:visited{
+	color:red;
+}
+
+.topNav{
+	background-color:#0D1D41;
+	overflow:hidden;
+	font-family:Arial;
+	display:flex;
+	align-items:center;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+.nav-links{
+	display:flex;
+	gap:10px;
+	transition: all 0.3s ease;
+}
+
+.menu-toggle{
+	display:none;
+	font-size:28px;
+	color:red;
+	cursor:pointer;
+	padding:10px;
+}
+.menu-toggle:hover{
+  color:white;
+}
+
+.topNav a{
+	float:none;
+	color:red;
+	text-align:center;
+	padding: 14px 16px;
+	text-decoration:none;
+	font-size:16px;
+	transition-duration:0.4s;
+}
+
+.drop{
+	float:none;
+	overflow:hidden;
+}
+
+.drop .dropbtn{
+	font-size:16px;
+	border:none;
+	outline:none;
+	color:red;
+	padding: 14px 16px;
+	background-color:inherit;
+	font-family:inherit;
+	margin:0;
+	transition-duration:0.4s;
+}
+
+.topNav a:hover, .drop:hover .dropbtn{
+	background-color:#000000;
+}
+
+.drop-content {
+	display:none;
+	position:absolute;
+	background-color:#0D1D41;
+	min-width:100px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index:1;
+}
+
+.drop-content a{
+	display:block;
+	text-align:left;
+	color:red;
+	padding: 12px 16px;
+	text-decoration:none;
+	display:block;
+	text-align:left;
+}
+
+.drop-content a:hover{
+	background:#000000;
+}
+
+.drop:hover .drop-content{
+	display:block;
+}
+
+/* Main Page pic*/
+.frontPic{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:5px;
+	width:25%;
+	padding:10px;
+}
+.home{
+	padding:20px 20px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	text-align:center;
+}
+/*Who We Are Pages*/
+.mission{
+	padding:20px 20px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	text-align:center;
+	font-size:19px;
+}
+
+.missionP{
+	font-size:22px;
+}
+
+#contact{
+	margin-top:5%; 
+	font-size:50px;
+}
+
+.contactP{
+	position:fixed; 
+	bottom:5vh; 
+	right:10vw;
+}
+
+.contactPImage{
+	width:350px;
+	height:350px;
+}
+
+p{
+	font-size:19px;
+}
+
+.board{
+	display:flex;
+	flex-wrap:wrap;
+	gap:20px;
+	align-items:center;
+	justify-content:center;
+}
+
+.left{
+	flex:1 1 20%;
+	line-height:1.5;
+	padding:14px;
+	max-width:100%;
+}
+
+.right{
+	flex:1 1 20%;
+	line-height:1.5;
+	padding:14px;
+	max-width:100%;
+}
+.pad{
+	padding:14px;
+}
+
+/*Start of Services*/
+.services{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	text-align:center;
+	line-height:1.5;
+	padding:14px;
+	text-align:center;
+	font-size:19px;
+	font-family:inherit;
+}
+
+ul{
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start;
+}
+
+li{
+	text-align:left;
+	padding:14px;
+	line-height:1.5;
+	font-family:inherit;
+	font-size:18px;
+	max-width:100%;
+}
+
+/*Contact*/
+.contact{
+	line-height:1.5;
+	padding:14px;
+	text-align:center;
+	font-family:inherit;
+	font-size:24px;
+}
+
+/*Help Our Cause*/
+.help{
+	text-align:center;
+	font-size:25px;
+	font-family:inherit;
+	line-height:1.5;
+	padding:14px;
+}
+
+.apply{
+	font-size:18px;
+	border-radius:8px;
+	background-color:white;
+	color:grey;
+	border:2px solid #f44336;
+	transition-duration:0.4s;
+	padding: 8px;
+	font-weight: bold;
+}
+
+.apply:hover{
+	background-color:#f44336;
+	color:white;
+	cursor:pointer;
+}
+.helpI{
+	width:500px;
+}
+.helpI2{
+	width:500px;
+	padding-left:192px;
+}
+/*FAQ*/
+.FAQ{
+	padding:20px 20px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	text-align:center;
+	justify-content:center;
+}
+.nightingale{
+	background-image: url('NightingaleBackGround.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size:cover;
+}
+/*Sponsor*/
+span{
+	padding-left:75px;
+	padding-right:75px;
+}	
+.scroll-container {
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 50px;
+  max-width:100%
+}
+
+.scroll-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-right 15s linear infinite; 
+  font-size:30px;
+  white-space:nowrap;
+}
+.sponsor-images{
+	display: grid; 
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap:20px;
+	max-width:900px;
+	margin:30px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+	margin-left:25vw;
+	justify-content:center;
+	align-items:center;
+}
+
+.scroll-text:hover {
+  animation-play-state: paused; 
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+
+.sponsor{
+	font-size:35px; 
+}
+
+/*Memories*/
+.tributes{
+	max-width:400px;
+	max-height:300px;
+	margin-right:80px;
+}
+.imargin-right{
+	margin: 10px;
+	width:150px;
+	height:210px;
+}
+.memoriesContainer {
+    display: grid;
+	align-content:center;
+	gap:10px;
+	padding: 10px;
+	justify-content:center;
+    grid-template-columns: repeat(4, 1fr);
+	text-align:center;
+	/*grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));*/
+}
+.tile1{
+	grid-area:tile1;
+}
+.memoriesInfo {
+	flex: 1;
+	min-width: 0;
+	width: 100%;
+}
+
+.memoriesImage {
+	max-width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+	object-fit: contain;
+	max-width: 40px;
+	width: 100%;
+	zoom: 1.6;
+}
+
+.memoriesDesign{
+	max-width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+	
+	width: auto;
+    background-color: #0D1D41;
+	/*border: 5px solid white;*/
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	line-height:1.5;
+}
+
+.memoriesTributeImage{
+	width:90px;
+	margin-left:5vw;
+}
+
+.memoriesTributeYear{
+	display:flex; 
+	flex-direction:row; 
+	align-content:center; 
+	justify-content:center;
+}
+
+/*Board of Directors*/
+.bodDesign{
+	max-width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+	
+	width: auto;
+    background-color: #0D1D41;
+	/*border: 5px solid white;*/
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	line-height:1.5;
+}
+
+.bodContainer{
+	display:grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap:20px;
+}
+
+.bodPictures{
+	width:30%;
+}
+
+/*Divs*/
+.tcolor{
+	color:red
+}
