@@ -1,1 +1,1 @@
-# FLNHG
+During my time at the tech center a small group of us wirked kn this website. one kid managed the site kne wirked kn frint end and i was tasked with all the backend things. all the pho snd databaseing is my work frkmwhat ive learned in my few years as a devoper. the website is fir the fingerlakes nurses honor guard snd thisbis the most up to data repo that i have. this will be modifyed in the futer to add a admin page and some mire databseing for the log in. 
